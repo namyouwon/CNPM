@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 class loginController extends Controller
 {
     public function logout(){
@@ -25,17 +26,14 @@ class loginController extends Controller
     }
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'email' => 'required|email:filter',
-            'password' => 'required|min:3'
-        ]);
-
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
+            Session::put('error', '');
             return redirect()->route('index');
         } else {
             Session::put('error', 'Email hoặc password không chính xác');
             return redirect()->back();
         }
     }
+
 }

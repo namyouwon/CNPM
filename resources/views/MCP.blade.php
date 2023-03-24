@@ -19,6 +19,7 @@
             @include('contents.header')
 
             <!-- Main content -->
+            @include('contents.MCP.route')
         </div>
     </div>
 

@@ -6,15 +6,11 @@
     
     @include('components.reload')
 
-    <!--Navbar-->
-    @include('components.navbar')
-
-    <!--Sidebar-->
-    @include('components.sidebar')
-
-   
                         
-                 
+    <form method="get" action="../employee">
+        <input type="submit" name="submit" value="Click"/>
+        @csrf
+    </form >      
     <div class="content-wrapper">
        
         <!--Header(Page header)-->

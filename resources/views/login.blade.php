@@ -6,7 +6,6 @@
 </head>
 
 <body class="hold-transition login-page">
-
     <div class="login-box">
         <div class="login-logo">
             <h2>ĐĂNG NHẬP</h2>
@@ -43,7 +42,7 @@
                             <div class="icheck-primary">
                                 <input type="checkbox" name="remember" id="remember">
                                 <label for="remember">
-                                    Nhớ mật khẩu {{$error}}
+                                    Nhớ mật khẩu 
                                 </label>
                             </div>
                         </div>

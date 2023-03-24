@@ -26,10 +26,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/viewDetail', [mainController::class, 'detail']);
         Route::get('/edit', [mainController::class, 'edit']);
     });
+    Route::get('/main', [mainController::class, 'main'])->name('main');
+    Route::get('/employee', [mainController::class, 'employee']);
+    Route::get('/MCP', [mainController::class, 'MCP']);
+    Route::get('/vehicle', [mainController::class, 'vehicle']);
 });
 
 
-Route::get('employee',[mainController::class, 'employee']);
-Route::get('MCP', [mainController::class, 'MCP']);
-Route::get('vehicle', [mainController::class, 'vehicle']);
-Route::get('main',[mainController::class, 'main']);
+
+
